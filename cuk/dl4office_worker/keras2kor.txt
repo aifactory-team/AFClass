@@ -1,0 +1,279 @@
+model = Sequential()	시퀀셜 모델을 생성합니다.
+model.add(Dense(1, input_dim=1))	모델에 입력 벡터가 1개이고 출력 벡터가 1개인 전결합 레이어를 추가합니다.
+model.compile(optimizer='rmsprop', loss='mse')	모델을 rmsprop 옵티마이져와 mse 손실함수로 컴파일합니다.
+model.fit(x_train, y_train, epochs=50, batch_size=64)	x_train과 y_train을 사용하여 50번의 에포크와 64개 샘플을 한 배치로 모델을 학습합니다.
+model.evaluate(x_test, y_test, batch_size=32)	x_text와 y_text를 이용하여 32개 샘플을 한 배치로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Dense(64, input_dim=1, activation='relu'))	모델에 입력 형태가 1차원이고 출력 뉴런이 64개이고 활성화 함수가 relu인 전결합 레이어를 추가합니다.
+model.add(Dense(1))	모델에 출력 벡터가 1개인 전결합 레이어를 추가합니다.
+model.compile(optimizer='rmsprop', loss='mse')	모델을 rmsprop 옵티마이져와 mse 손실함수로 컴파일합니다.
+model.fit(x_train, y_train, epochs=50, batch_size=64)	x_train과 y_train을 사용하여 50번의 에포크와 샘플 64개를 한 배치로 모델을 학습합니다.
+model.evaluate(x_test, y_test, batch_size=32)	x_text와 y_text를 이용하여 32개 샘플을 한 배치로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 만듭니다.
+model.add(Dense(64, input_dim=1, activation='relu'))	모델에 입력 데이터 형태가 1차원이고 64개의 출력 뉴런을 가지고 활성화 함수가 relu인 전결합 레이어를 추가합니다.
+model.add(Dense(64, activation='relu'))	모델에 64개의 출력 뉴런을 가지고 활성화 함수가 relu인 전결합 레이어를 추가합니다.
+model.add(Dense(1))	모델에 출력 벡터가 하나인 전결합 레이어를 추가합니다.
+model.compile(optimizer='rmsprop', loss='mse')	rmsprop인 옵티마이져랑 mse 손실함수로 모델을 컴파일합니다.
+model.fit(x_train, y_train, epochs=50, batch_size=64)	x_train과 y_train을 이용해서 번의 에포크와 64개의 샘플을 한 배치로 모델을 학습합니다.
+model.evaluate(x_test, y_test, batch_size=32)	x_test와 y_test을 이용해서 32개 샘플을 한 배치로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델 하나를 만듭니다.
+model.add(Dense(1, input_dim=12, activation='sigmoid'))	모델에 입력 벡터가 12개이고 출력 뉴런이 1개인 전결합 레이어를 추가합니다. 이때 활성화 함수는 시그모이드입니다.
+model.compile(optimizer='rmsprop', loss='binary_crossentropy', metrics=['accuracy'])	rmsprop 옵티마이져와 바이너리 크로스엔트로피 손실함수로 모델을 컴파일합니다. 메트릭은 정확도로 설정합니다.
+model.fit(x_train, y_train, epochs=1000, batch_size=64)	x_train과 y_train을 이용하여 천 번의 에포크와 64개 샘플을 한 배치로 모델을 학습시킵니다.
+model.evaluate(x_test, y_test, batch_size=32)	x_test와 y_test를 이용하여 64개 샘플을 한 배치로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Dense(64, input_dim=12, activation='relu'))	입력 벡터가 12개이고 출력 뉴런이 64개이고 활성화 함수가 relu인 전결합층을 모델에 추가합니다.
+model.add(Dense(1, activation='sigmoid'))	활성화함수가 시그모이드이고 출력 벡터가 한개인 전결합 레이어를 추가합니다.
+model.compile(optimizer='rmsprop', loss='binary_crossentropy', metrics=['accuracy'])	rmsprop 옵티마이져와 바이너리 크로스엔트로피 손실함수를 사용하여 모델을 컴파일합니다. 메트릭은 정확도로 설정합니다.
+model.fit(x_train, y_train, epochs=1000, batch_size=64)	천 번의 에포크와 64개의 배치사이즈 설정으로 트레이닝셋을 학습합니다.
+model.evaluate(x_test, y_test, batch_size=32)	테스트셋으로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Dense(64, input_dim=12, activation='relu'))	입력 벡터가 12개이고 출력 뉴런이 64개인 덴스레이어를 추가합니다. 액티베이션 함수는 렐루로 지정합니다.
+model.add(Dense(64, activation='relu'))	모델에 액티베이션 평션이 렐루이고 출력 뉴런 수가 64개인 덴스레이어를 모델에 추가합니다.
+model.add(Dense(1, activation='sigmoid'))	출력 벡터가 1이고 활성화 함수가 시그모이드인 전결합층을 모델에 추가합니다.
+model.compile(optimizer='rmsprop', loss='binary_crossentropy', metrics=['accuracy'])	최적화기는 rmsprop으로 손실함수는 바이너리 크로스엔트로피로 매트릭은 정확도로 설정하여 모델을 컴파일합니다.
+model.fit(x_train, y_train, epochs=1000, batch_size=64)	훈련셋으로 모델을 학습합니다. 에포크는 천 번으로 배치사이즈는 64로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=32)	모델을 시험셋으로 평가합니다. 배치사이즈는 32로 설정합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Dense(10, input_dim=12, activation='softmax'))	모델에 입력 벡터가 12개이고 출력 벡터가 10개인 전결합층을 추가합니다. 활성화 함수를 소프트맥스로 설정합니다.
+model.compile(optimizer='rmsprop', loss='categorical_crossentropy', metrics=['accuracy'])	rmsprop 최적화기와 카테고리컬 크로스엔트로피 손실함수를 사용하여 모델을 컴파일합니다. 메트릭은 정확도로 설정합니다.
+model.fit(x_train, y_train, epochs=1000, batch_size=64)	훈련셋으로 모델을 학습합니다. 에포크는 천 번으로 배치사이즈는 64로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=32)	테스트셋을 이용하여 배치사이즈를 32로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Dense(64, input_dim=12, activation='relu'))	입력 벡터가 12개 출력 뉴런이 64개이고 활성화 함수가 relu인 덴스 레이어를 추가합니다.
+model.add(Dense(10, activation='softmax'))	출력 벡터가 10개이고 활성화 함수가 소프트맥스인 전결합층을 모델에 추가합니다.
+model.compile(optimizer='rmsprop', loss='categorical_crossentropy', metrics=['accuracy'])	rmsprop 최적화기와 카테고리컬 크로스엔트로피 손실함수를 사용하여 모델을 컴파일합니다. 메트릭은 정확도로 설정합니다.
+model.fit(x_train, y_train, epochs=1000, batch_size=64)	훈련셋으로 모델을 학습합니다. 에포크는 천 번으로 배치사이즈는 64로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=32)	테스트셋을 이용하여 배치사이즈를 32로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Dense(64, input_dim=12, activation='relu'))	입력 벡터가 12개 출력 뉴런이 64개이고 활성화 함수가 렐루인 덴스 레이어를 추가합니다.
+model.add(Dense(64, activation='relu'))	활성화 함수가 relu이고 출력 뉴런 수가 64개인 덴스 레이어를 모델에 추가합니다.
+model.add(Dense(10, activation='softmax'))	출력 벡터가 10개이고 액티베이션 함수가 소프트맥스인 덴스 레이어를 모델에 추가합니다.
+model.compile(optimizer='rmsprop', loss='categorical_crossentropy', metrics=['accuracy'])	rmsprop 최적화기와 카테고리컬 크로스엔트로피 손실함수를 사용하여 모델을 컴파일합니다. 메트릭은 정확도로 설정합니다.
+model.fit(x_train, y_train, epochs=1000, batch_size=64)	훈련셋으로 모델을 학습합니다. 에포크는 천 번으로 배치사이즈는 64로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=32)	테스트셋을 이용하여 배치사이즈를 32로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Dense(256, activation='relu', input_dim = width*height))	모델에 가로 곱하기 세로 크기만큼 벡터를 입력하고 출력 뉴런 수가 256개, 활성화 함수가 relu인 전결합층을 모델에 추가합니다.
+model.add(Dense(256, activation='relu'))	활성화 함수를 렐루로 출력 뉴런 수를 256로 설정한 덴스 레이어를 추가합니다.
+model.add(Dense(256))	출력 뉴런 수가 256개이고 활성화 함수가 리니어인 덴스 레이어를 추가합니다.
+model.add(Dense(1))	출력 벡터가 1개인 전결합층을 모델에 추가합니다. 활성화 함수는 디폴트인 리니어로 설정됩니다.
+model.compile(loss='mse', optimizer='adam')	로스를 mse로 옵터마이져를 adam으로 설정한 후 모델을 컴파일합니다.
+model.fit(x_train, y_train, batch_size=32, epochs=1000, validation_data=(x_val, y_val))	훈련셋으로 모델을 학습하고 검증셋으로 매 에포크마다 검증합니다. 에포크는 천 번으로 배치사이즈는 32로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=32)	테스트셋을 이용하여 배치사이즈를 32로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(width, height, 1)))	입력 형태가 너비, 높이, 채널이 1개이고 필터의 수가 32개이고 필터 사이즈가 3 곱하기 3이고 활성화 함수가 relu인 컨볼루션 2D 레이어를 추가합니다.
+model.add(MaxPooling2D(pool_size=(2, 2)))	가로 세로 2배로 줄이는 맥스풀링 2D 레이어를 모델에 추가합니다.
+model.add(Conv2D(32, (3, 3), activation='relu'))	필터의 수가 32개이고 필터 사이즈가 3 곱하기 3이고 활성화 함수가 relu인 컨볼루션 2D 레이어를 추가합니다.
+model.add(MaxPooling2D(pool_size=(2, 2)))	가로 세로 2배로 줄이는 맥스풀링 2D 레이어를 모델에 추가합니다.
+model.add(Flatten())	1차원 벡터로 바꿔주는 플래튼 레이어를 추가합니다.
+model.add(Dense(256, activation='relu'))	활성화 함수를 렐루로 출력 뉴런 수를 256로 설정한 덴스 레이어를 추가합니다.
+model.add(Dense(1))	출력 벡터가 1개인 덴스 레이어를 모델에 추가합니다.
+model.compile(loss='mse', optimizer='adam')	로스를 mse로 옵터마이져를 adam으로 설정한 후 모델을 컴파일합니다.
+model.fit(x_train, y_train, batch_size=32, epochs=1000, validation_data=(x_val, y_val))	훈련셋으로 모델을 학습하고 검증셋으로 매 에포크마다 검증합니다. 에포크는 천 번으로 배치사이즈는 32로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=32)	시험셋으로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Dense(256, input_dim=width*height, activation='relu'))	입력이 가로 곱하기 세로 크기만큼 벡터를 가지고 출력 뉴런 수가 256개이고 활성화 함수가 렐루인 전결합층을 추가합니다.
+model.add(Dense(256, activation='relu'))	엑티베이션 펑션이 relu이고 출력 뉴런 수가 256개인 덴스레이어를 추가합니다.
+model.add(Dense(256, activation='relu'))	엑티베이션 펑션이 렐루이고 출력 뉴런 수가 256개인 덴스레이어를 추가합니다.
+model.add(Dense(1, activation='sigmoid'))	활성화함수가 시그모이드이고 출력 벡터가 1개인 전결합 레이어를 추가합니다.
+model.compile(loss='mse', optimizer='adam')	로스를 mse로 옵터마이져를 adam으로 설정한 후 모델을 컴파일합니다.
+model.fit(x_train, y_train, batch_size=32, epochs=1000, validation_data=(x_val, y_val))	훈련셋으로 모델을 학습하고 검증셋으로 매 에포크마다 검증합니다. 에포크는 천 번으로 배치사이즈는 32로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=32)	테스트셋을 이용하여 배치사이즈를 32로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(width, height, 1)))	입력 이미지가 너비, 높이, 채널이 1개이고 필터의 수가 32개이고 필터 사이즈가 3 곱하기 3이고 활성화 함수가 렐루인 컨볼루션 2D 층을 추가합니다.
+model.add(MaxPooling2D(pool_size=(2, 2)))	2배로 줄이는 맥스풀링 2D 레이어를 모델에 추가합니다.
+model.add(Conv2D(32, (3, 3), activation='relu'))	필터의 수가 32개이고 필터 사이즈가 3 곱하기 3이고 활성화 함수가 렐루인 컨볼루션 2D 층을 추가합니다.
+model.add(MaxPooling2D(pool_size=(2, 2)))	2배로 줄이는 맥스풀링 2D 레이어를 추가합니다.
+model.add(Flatten())	플래튼 레이어를 모델에 추가합니다.
+model.add(Dense(256, activation='relu'))	활성화 함수를 relu로 출력 뉴런 수를 256로 설정한 덴스 레이어를 추가합니다.
+model.add(Dense(1, activation='sigmoid'))	활성화함수가 sigmoid이고 출력 벡터가 1개인 전결합 레이어를 추가합니다.
+model.compile(loss='binary_crossentropy', optimizer='sgd', metrics=['accuracy'])	최적화기는 sgd으로 설정하고 손실함수는 바이너리 크로스엔트로피로 설정하고 매트릭은 정확도로 설정하여 모델을 컴파일합니다.
+model.fit(x_train, y_train, epochs=30, batch_size=32, validation_data=(x_val, y_val))	훈련셋으로 모델을 학습하고 검증셋으로 매 에포크마다 검증합니다. 에포크는 32번으로 배치사이즈는 32로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=32)	시험셋으로 모델을 평가합니다. 배치사이즈는 32로 설정합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(width, height, 1)))	이미지 형태가 너비, 높이, 채널이 1개이고 필터의 수가 32개이고 필터 사이즈가 3x3이고 액티베이션 함수가 렐루인 컨볼루션 2D 레이어를 추가합니다.
+model.add(Conv2D(32, (3, 3), activation='relu'))	필터의 수가 32개이고 필터 사이즈가 3x3이고 액티베이션 함수가 렐루인 컨볼루션 2D 레이어를 추가합니다.
+model.add(MaxPooling2D(pool_size=(2, 2)))	가로 세로 2배로 줄이는 맥스풀링 2D 레이어를 모델에 추가합니다.
+model.add(Dropout(0.25))	드랍 비율이 0.25인 드랍아웃 레이어를 추가합니다.
+model.add(Conv2D(64, (3, 3), activation='relu'))	필터의 수가 64개이고 필터 사이즈가 3 곱하기 3이고 활성화 함수가 relu인 컨볼루션 2D 레이어를 추가합니다.
+model.add(Conv2D(64, (3, 3), activation='relu'))	필터의 수가 64개이고 필터 사이즈가 3 곱하기 3이고 활성화 함수가 렐루인 컨볼루션 2D 층을 추가합니다.
+model.add(MaxPooling2D(pool_size=(2, 2)))	가로 세로 2배로 줄이는 맥스풀링 2D 레이어를 모델에 추가합니다.
+model.add(Dropout(0.25))	드랍 비율이 25%인 드랍아웃 레이어를 추가합니다.
+model.add(Flatten())	1차원 벡터로 바꿔주는 플래튼 레이어를 추가합니다.
+model.add(Dense(256, activation='relu'))	활성화 함수를 relu로 출력 뉴런 수를 256로 설정한 전결합층을 추가합니다.
+model.add(Dropout(0.5))	드랍 비율이 0.5인 드랍아웃 레이어를 추가합니다.
+model.add(Dense(1, activation='sigmoid'))	액티베이션 평션이 sigmoid이고 출력 벡터가 1개인 전결합 레이어를 추가합니다.
+model.compile(loss='binary_crossentropy', optimizer='sgd', metrics=['accuracy'])	손실함수는 바이너리 크로스엔트로피로 설정하고 최적화기는 sgd으로 설정하고 매트릭은 정확도로 설정하여 모델을 컴파일합니다.
+model.fit(x_train, y_train, epochs=30, batch_size=32, validation_data=(x_val, y_val))	훈련셋으로 모델을 학습하고 검증셋으로 매 에포크마다 검증합니다. 에포크는 32번으로 배치사이즈는 32로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=32)	테스트셋을 이용하여 배치사이즈를 32로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Dense(256, input_dim=width*height, activation='relu'))	입력이 가로 곱하기 세로 크기만큼 벡터를 가지고 출력 뉴런 수가 256개이고 활성화 함수가 렐루인 전결합층을 추가합니다.
+model.add(Dense(256, activation='relu'))	활성화 함수를 relu로 출력 뉴런 수를 256로 설정한 전결합층을 모델에 추가합니다.
+model.add(Dense(256, activation='relu'))	엑티베이션 펑션이 렐루이고 출력 뉴런 수가 256개인 덴스레이어를 추가합니다.
+model.add(Dense(10, activation='softmax'))	출력 벡터가 10개이고 액티베이션 함수가 소프트맥스인 덴스레이어를 모델에 추가합니다.
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])	최적화기는 아담으로 손실함수는 카테고리컬 크로스엔트로피로 매트릭은 정확도로 설정하여 모델을 컴파일합니다.
+model.fit(x_train, y_train, epochs=10, batch_size=64, validation_data=(x_val, y_val))	훈련셋으로 모델을 학습하고 검증셋으로 매 에포크마다 검증합니다. 에포크는 10번으로 배치사이즈는 64로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=64)	테스트셋을 이용하여 배치사이즈를 32로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(width, height, 1)))	입력 형태가 너비, 높이, 채널이 1개이고 필터의 수가 32개이고 필터 사이즈가 3 곱하기 3이고 활성화 함수가 렐루인 컨볼루션 2D 레이어를 추가합니다.
+model.add(MaxPooling2D(pool_size=(2, 2)))	2배로 줄이는 맥스풀링 2D 레이어를 모델에 추가합니다.
+model.add(Conv2D(32, (3, 3), activation='relu'))	필터의 수가 32개이고 필터 사이즈가 3 곱하기 3이고 활성화 함수가 렐루인 컨볼루션 2D 레이어를 추가합니다.
+model.add(MaxPooling2D(pool_size=(2, 2)))	2배로 줄이는 맥스풀링 2D 레이어를 추가합니다.
+model.add(Flatten())	1차원 벡터로 바꿔주는 플래튼 레이어를 모델에 추가합니다.
+model.add(Dense(256, activation='relu'))	활성화 함수를 relu로 출력 뉴런 수를 256로 설정한 덴스 레이어를 추가합니다.
+model.add(Dense(10, activation='softmax'))	출력 벡터가 10개이고 활성화 함수가 softmax인 전결합층을 모델에 추가합니다.
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])	최적화기는 아담으로 설정하고 손실함수는 카테고리컬 크로스엔트로피로 설정하고 매트릭은 정확도로 설정하여 모델을 컴파일합니다.
+model.fit(x_train, y_train, epochs=10, batch_size=64, validation_data=(x_val, y_val))	훈련셋으로 모델을 학습하고 검증셋으로 매 에포크마다 검증합니다. 에포크는 10번으로 배치사이즈는 64로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=64)	시험셋으로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(width, height, 1)))	입력 형태가 너비, 높이, 채널이 1개이고 필터의 수가 32개이고 필터 사이즈가 3 곱하기 3이고 활성화 함수가 렐루인 컨볼루션 2D 레이어를 추가합니다.
+model.add(Conv2D(32, (3, 3), activation='relu'))	필터의 수가 32개이고 필터 사이즈가 3 곱하기 3이고 활성화 함수가 렐루인 컨볼루션 2D 레이어를 추가합니다.
+model.add(MaxPooling2D(pool_size=(2, 2)))	가로 세로 2배로 줄이는 맥스풀링 2D 레이어를 모델에 추가합니다.
+model.add(Dropout(0.25))	드랍 비율이 0.25인 드랍아웃 레이어를 추가합니다.
+model.add(Conv2D(64, (3, 3), activation='relu'))	필터의 수가 64개이고 필터 사이즈가 3x3이고 액티베이션 함수가 렐루인 컨볼루션 2D 레이어를 추가합니다.
+model.add(Conv2D(64, (3, 3), activation='relu'))	필터의 수가 64개이고 필터 사이즈가 3 곱하기 3이고 활성화 함수가 렐루인 컨볼루션 2D 레이어를 추가합니다.
+model.add(MaxPooling2D(pool_size=(2, 2)))	2배로 줄이는 맥스풀링 2D 레이어를 모델에 추가합니다.
+model.add(Dropout(0.25))	드랍 비율이 25%인 드랍아웃층을 추가합니다.
+model.add(Flatten())	1차원 벡터로 바꿔주는 플래튼 레이어를 추가합니다.
+model.add(Dense(256, activation='relu'))	활성화 함수를 relu로 출력 뉴런 수를 256로 설정한 전결합층을 추가합니다.
+model.add(Dropout(0.5))	드랍 비율이 50%인 드랍아웃층을 추가합니다.
+model.add(Dense(10, activation='softmax'))	출력 벡터가 10개이고 액티베이션 펑션이 소프트맥스인 덴스레이어를 모델에 추가합니다.
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])	손실함수는 카테고리컬 크로스엔트로피로 설정하고 최적화기는 아담으로 설정하고 매트릭은 정확도로 설정하여 모델을 컴파일합니다.
+model.fit(x_train, y_train, epochs=10, batch_size=64, validation_data=(x_val, y_val))	훈련셋으로 모델을 학습하고 검증셋으로 매 에포크마다 검증합니다. 에포크는 10번으로 배치사이즈는 64로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=64)	테스트셋을 이용하여 배치사이즈를 32로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Dense(32, input_dim=40, activation="relu"))	입력 벡터가 40개이고 출력 뉴런 수가 32개이며 활성화 함수가 렐루인 덴스레이어를 모델에 추가합니다.
+model.add(Dropout(0.3))	드랍 비율이 30%인 드랍아웃 레이어를 추가합니다.
+model.add(Dense(32, activation="relu"))	출력 뉴런 수가 32개이고 활성화 함수가 relu인 전결합층을 추가합니다.
+model.add(Dropout(0.3))	드랍 비율이 0.3인 드랍아웃층을 추가합니다.
+model.add(Dense(32, activation="relu"))	출력 뉴런 수가 32개이고 활성화 함수가 렐루인 전결합층을 추가합니다.
+model.add(Dropout(0.3))	드랍 비율이 0.3인 드랍아웃층을 추가합니다.
+model.add(Dense(1))	모델에 출력 벡터가 1개인 전결합층을 추가합니다.
+model.compile(loss='mean_squared_error', optimizer='adam')	손실 함수를 민 스퀘어 에러로 설정하고 옵티마이져를 아담으로 설정하여 모델을 컴파일 합니다.
+model.fit(x_train, y_train, epochs=200, batch_size=32, validation_data=(x_val, y_val))	훈련셋으로 모델을 학습하고 검증셋으로 매 에포크마다 검증합니다. 에포크는 200번으로 배치사이즈는 32로 설정합니다.
+model.evaluate(x_train, y_train)	시험셋으로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(LSTM(32, input_shape=(None, 1)))	출력 벡터가 32개이고 입력 형태가 None과 1인 LSTM 레이어를 추가합니다.
+model.add(Dropout(0.3))	드랍 비율이 30%인 드랍아웃 레이어를 추가합니다.
+model.add(Dense(1))	출력 벡터가 1개인 전결합층을 모델에 추가합니다. 활성화 함수는 디폴트인 리니어로 설정됩니다.
+model.compile(loss='mean_squared_error', optimizer='adam')	손실 함수를 평균 제곱 오차로 설정하고 최적화기를 아담으로 설정하여 모델을 컴파일 합니다.
+model.fit(x_train, y_train, epochs=200, batch_size=32, validation_data=(x_val, y_val))	훈련셋으로 모델을 학습하고 검증셋으로 매 에포크마다 검증합니다. 에포크는 200번으로 배치사이즈는 32로 설정합니다.
+model.evaluate(x_train, y_train)	모델을 x_test와 y_test로 평가합니다.
+model = Sequential()	시퀀셜 모델을 만듭니다.
+model.add(LSTM(32, batch_input_shape=(1, look_back, 1), stateful=True))	출력 벡터가 32개이고 배치 입력 형태가 1, 루프백, 1인 상태유지 LSTM 레이어를 추가합니다.
+model.add(Dropout(0.3))	드랍 비율이 30%인 드랍아웃 레이어를 추가합니다.
+model.add(Dense(1))	출력 벡터가 1개인 덴스 레이어를 모델에 추가합니다.
+model.compile(loss='mean_squared_error', optimizer='adam')	손실 함수를 평균 제곱 오차로 설정하고 옵티마이져를 아담으로 설정하여 모델을 컴파일 합니다.
+model.fit(x_train, y_train, epochs=200, batch_size=32, validation_data=(x_val, y_val))	에포크는 200번으로 배치사이즈는 32로 설정하여 훈련셋으로 모델을 학습하고 검증셋으로 매 에포크마다 검증합니다.
+model.evaluate(x_train, y_train)	모델을 시험셋으로 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(LSTM(32, batch_input_shape=(1, look_back, 1), stateful=True, return_sequences=True))	출력 벡터가 32개이고 배치 입력 형태가 1, 루프백, 1이고 시퀀스를 반환하는 상태유지 LSTM 레이어를 추가합니다.
+model.add(Dropout(0.3))	드랍 비율이 0.3인 드랍아웃 레이어를 추가합니다.
+model.add(LSTM(32, stateful=True, return_sequences=True))	출력 벡터가 32개이고 시퀀스를 반환하는 상태유지 LSTM 레이어를 추가합니다.
+model.add(Dropout(0.3))	드랍 비율이 0.3인 드랍아웃 레이어를 추가합니다.
+model.add(LSTM(32, stateful=True))	출력 벡터가 32개이고 상태유지 LSTM 레이어를 추가합니다.
+model.add(Dropout(0.3))	드랍 비율이 0.3인 드랍아웃 레이어를 추가합니다.
+model.add(Dense(1))	모델에 출력 벡터가 1개인 전결합층을 추가합니다.
+model.compile(loss='mean_squared_error', optimizer='adam')	로스 함수를 평균 제곱 오차로 설정하고 옵티마이져를 아담으로 설정하여 모델을 컴파일 합니다.
+model.fit(x_train, y_train, epochs=200, batch_size=32, validation_data=(x_val, y_val))	훈련셋으로 모델을 학습하고 검증셋으로 매 에포크마다 검증합니다. 에포크는 200번으로 배치사이즈는 32로 설정합니다.
+model.evaluate(x_train, y_train)	모델을 시험셋으로 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Embedding(20000, 128, input_length=200))	이만개 사전 크기를 가지고 입력 길이가 200개이고 출력 벡터가 128인 임베딩 레이어를 모델에 추가합니다.
+model.add(Flatten())	1차원 벡터로 바꿔주는 플래튼 레이어를 모델에 추가합니다.
+model.add(Dense(256, activation='relu'))	활성화 함수를 relu로 출력 뉴런 수를 256로 설정한 전결합층을 모델에 추가합니다.
+model.add(Dense(1, activation='sigmoid'))	액티베이션 함수가 sigmoid이고 출력 벡터가 1개인 전결합 레이어를 추가합니다.
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])	최적화기는 아담으로 손실함수는 바이너리 크로스엔트로피로 매트릭은 정확도로 설정하여 모델을 컴파일합니다.
+model.fit(x_train, y_train, epochs=2, batch_size=64, validation_data=(x_val, y_val))	훈련셋으로 모델을 학습하고 검증셋으로 매 에포크마다 검증합니다. 에포크는 2번으로 배치사이즈는 64로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=64)	시험셋으로 모델을 평가합니다. 배치사이즈는 32로 설정합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Embedding(20000, 128))	이만개 사전 크기를 가지고 출력 벡터가 128인 임베딩 레이어를 모델에 추가합니다.
+model.add(LSTM(128))	출력 벡터가 128개인 LSTM 레이어를 모델에 추가합니다.
+model.add(Dense(1, activation='sigmoid'))	액티베이션 함수가 sigmoid이고 출력 벡터가 1개인 덴스 레이어를 추가합니다.
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])	최적화기는 아담으로 설정하고 손실함수는 바이너리 크로스엔트로피로 설정하고 매트릭은 정확도로 설정하여 모델을 컴파일합니다.
+model.fit(x_train, y_train, epochs=2, batch_size=64, validation_data=(x_val, y_val))	훈련셋으로 모델을 학습하고 검증셋으로 매 에포크마다 검증합니다. 에포크는 2번으로 배치사이즈는 64로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=64)	테스트셋을 이용하여 배치사이즈를 32로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Embedding(20000, 128, input_length=200))	이만개 사전 크기를 가지고 입력 길이가 200개이고 출력 벡터가 128인 임베딩 레이어를 모델에 추가합니다.
+model.add(Dropout(0.2))	드랍 비율이 0.2인 드랍아웃 레이어를 추가합니다.
+model.add(Conv1D(256, 3, padding='valid', activation='relu', strides=1))	필터의 수가 64개이고 필터 사이즈가 3 곱하기 3이고 활성화 함수가 렐루인 컨볼루션 2D 레이어를 추가합니다.
+model.add(GlobalMaxPooling1D())	글로벌 맥스풀링 1D를 모델에 추가합니다.
+model.add(Dense(128, activation='relu'))	엑티베이션 펑션이 relu이고 출력 뉴런 수가 128개인 덴스레이어를 추가합니다.
+model.add(Dropout(0.2))	드랍 비율이 0.2인 드랍아웃 레이어를 추가합니다.
+model.add(Dense(1, activation='sigmoid'))	액티베이션 함수가 sigmoid이고 출력 벡터가 1개인 전결합층을 추가합니다.
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])	손실함수는 바이너리 크로스엔트로피로 설정하고 최적화기는 아담으로 설정하고 매트릭은 정확도로 설정하여 모델을 컴파일합니다.
+model.fit(x_train, y_train, epochs=2, batch_size=64, validation_data=(x_val, y_val))	훈련셋으로 모델을 학습하고 검증셋으로 매 에포크마다 검증합니다. 에포크는 2번으로 배치사이즈는 64로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=64)	시험셋으로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Embedding(20000, 128, input_length=200))	이만개 사전 크기를 가지고 입력 길이가 200개이고 출력 벡터가 128인 임베딩 레이어를 모델에 추가합니다.
+model.add(Dropout(0.2))	드랍 비율이 0.2인 드랍아웃 레이어를 추가합니다.
+model.add(Conv1D(256, 3, padding='valid', activation='relu', strides=1))	필터의 수가 64개이고 필터 사이즈가 3 곱하기 3이고 활성화 함수가 렐루인 컨볼루션 2D 레이어를 추가합니다.
+model.add(MaxPooling1D(pool_size=4))	4배로 줄이는 맥스풀링 원디 레이어를 모델에 추가합니다.
+model.add(LSTM(128))	출력 벡터가 128개인 LSTM레이어를 추가합니다.
+model.add(Dense(1, activation='sigmoid'))	액티베이션 함수가 sigmoid이고 출력 벡터가 1개인 덴스 레이어를 추가합니다.
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])	로스 함수는 바이너리 크로스엔트로피로 설정하고 최적화기는 아담으로 설정하고 매트릭은 정확도로 설정하여 모델을 컴파일합니다.
+model.fit(x_train, y_train, epochs=2, batch_size=64, validation_data=(x_val, y_val))	훈련셋으로 모델을 학습하고 검증셋으로 매 에포크마다 검증합니다. 에포크는 2번으로 배치사이즈는 64로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=64)	테스트셋을 이용하여 배치사이즈를 64로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Embedding(15000, 128, input_length=120))	만오천개 사전 크기를 가지고 입력 길이가 120개이고 출력 벡터가 128인 임베딩 레이어를 모델에 추가합니다.
+model.add(Flatten())	플래튼 레이어를 모델에 추가합니다.
+model.add(Dense(256, activation='relu'))	엑티베이션 펑션이 렐루이고 출력 뉴런 수가 256개인 덴스레이어를 추가합니다.
+model.add(Dense(46, activation='softmax'))	활성화 함수가 소프트맥스이고 출력 벡터가 46개인 전결합층을 추가합니다.
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])	최적화기는 아담으로 손실함수는 카테고리컬 크로스엔트로피로 매트릭은 정확도로 설정하여 모델을 컴파일합니다.
+model.fit(x_train, y_train, epochs=10, batch_size=64, validation_data=(x_val, y_val))	훈련셋으로 모델을 학습하고 검증셋으로 매 에포크마다 검증합니다. 에포크는 10번으로 배치사이즈는 64로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=64)	시험셋으로 모델을 평가합니다. 배치사이즈는 64로 설정합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Embedding(15000, 128))	만오천개 사전 크기를 가지고 출력 벡터가 128인 임베딩 레이어를 모델에 추가합니다.
+model.add(LSTM(128))	출력 벡터가 128개인 LSTM 층을 추가합니다.
+model.add(Dense(46, activation='softmax'))	활성화 함수가 softmax이고 출력 벡터가 46개인 덴스레이어를 추가합니다.
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])	최적화기는 아담으로 손실함수는 카테고리컬 크로스엔트로피로 매트릭은 정확도로 설정하여 모델을 컴파일합니다.
+model.fit(x_train, y_train, epochs=10, batch_size=64, validation_data=(x_val, y_val))	훈련셋으로 모델을 학습하고 검증셋으로 매 에포크마다 검증합니다. 에포크는 10번으로 배치사이즈는 64로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=64)	테스트셋을 이용하여 배치사이즈를 64로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Embedding(15000, 128, input_length=120))	만오천개 사전 크기를 가지고 입력 길이가 120개이고 출력 벡터가 128인 임베딩 레이어를 모델에 추가합니다.
+model.add(Dropout(0.2))	드랍 비율이 0.2인 드랍아웃 레이어를 추가합니다.
+model.add(Conv1D(256, 3, padding='valid', activation='relu', strides=1))	필터의 수가 64개이고 필터 사이즈가 3 곱하기 3이고 활성화 함수가 렐루인 컨볼루션 2D 레이어를 추가합니다.
+model.add(GlobalMaxPooling1D())	글로벌 맥스풀링 1D를 모델에 추가합니다.
+model.add(Dense(128, activation='relu'))	엑티베이션 펑션이 relu이고 출력 뉴런 수가 128개인 덴스레이어를 추가합니다.
+model.add(Dropout(0.2))	드랍 비율이 0.2인 드랍아웃 레이어를 추가합니다.
+model.add(Dense(46, activation='softmax'))	액티베이션 함수가 소프트맥스이고 출력 벡터가 46개인 덴스 레이어를 추가합니다.
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])	최적화기는 아담으로 설정하고 손실함수는 카테고리컬 크로스엔트로피로 설정하고 매트릭은 정확도로 설정하여 모델을 컴파일합니다.
+model.fit(x_train, y_train, epochs=10, batch_size=64, validation_data=(x_val, y_val))	훈련셋으로 모델을 학습하고 검증셋으로 매 에포크마다 검증합니다. 에포크는 10번으로 배치사이즈는 64로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=64)	시험셋으로 모델을 평가합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model.add(Embedding(max_features, 128, input_length=text_max_words))	맥스피처 수 만큼 사전 크기를 가지고 입력 길이가 텍스트 맥스 워드만큼이고 출력 벡터가 128인 임베딩 레이어를 모델에 추가합니다.
+model.add(Dropout(0.2))	드랍 비율이 0.2인 드랍아웃 레이어를 추가합니다.
+model.add(Conv1D(256, 3, padding='valid', activation='relu', strides=1))	필터의 수가 64개이고 필터 사이즈가 3 곱하기 3이고 활성화 함수가 렐루인 컨볼루션 2D 레이어를 추가합니다.
+model.add(MaxPooling1D(pool_size=4))	4배로 줄이는 맥스풀링 1D 레이어를 모델에 추가합니다.
+model.add(LSTM(128))	출력 벡터가 128개인 LSTM층을 모델에 추가합니다.
+model.add(Dense(46, activation='softmax'))	액티베이션 함수가 소프트맥스이고 출력 벡터가 46개인 전결합층을 추가합니다.
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])	손실함수는 카테고리컬 크로스엔트로피로 설정하고 최적화기는 아담으로 설정하고 매트릭은 정확도로 설정하여 모델을 컴파일합니다.
+model.fit(x_train, y_train, epochs=10, batch_size=64, validation_data=(x_val, y_val))	훈련셋으로 에포크 열 번에 배치사이즈를 64로 모델을 학습합니다. 이때 매 에포크마다 검증셋으로 검증합니다.
+model.evaluate(x_test, y_test, batch_size=64)	시험셋으로 모델을 평가합니다. 배치사이즈는 64로 설정합니다.
+model = Sequential()	시퀀셜 모델을 생성합니다.
+model = Sequential()	시퀀셜 모델을 하나 생성합니다.
+model = Sequential()	시퀀셜 모델을 만듭니다.
+model = Sequential()	모델이라는 이름의 시퀀셜 모델을 생성합니다.
+model = Sequential()	모델이라는 이름의 시퀀셜 모델을 하나 만듭니다.
+model.evaluate(x_test, y_test, batch_size=32)	시험셋으로 모델을 평가합니다.
+model.evaluate(x_test, y_test, batch_size=16)	시험셋으로 모델을 평가합니다. 배치사이즈는 16로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=32)	시험셋으로 모델을 평가합니다. 배치사이즈는 32로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=64)	시험셋으로 모델을 평가합니다. 배치사이즈는 64로 설정합니다.
+model.add(Dense(64, input_dim=12, activation='relu'))	입력 벡터가 12개이고 출력 뉴런이 64개인 덴스레이어를 추가합니다. 액티베이션 함수는 렐루로 지정합니다.
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])	최적화기는 아담으로 손실함수는 바이너리 크로스엔트로피로 매트릭은 정확도로 설정하여 모델을 컴파일합니다.
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])	옵티마이져는 아담으로 손실함수는 바이너리 크로스엔트로피로 매트릭은 정확도로 설정하여 모델을 컴파일합니다.
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])	옵티마이져는 아담으로 목표함수는 바이너리 크로스엔트로피로 매트릭은 정확도로 설정하여 모델을 컴파일합니다.
+model.fit(x_train, y_train, epochs=1000, batch_size=64)	훈련셋으로 모델을 학습합니다. 에포크는 1000번으로 배치사이즈는 64로 설정합니다.
+model.fit(x_train, y_train, epochs=1000, batch_size=32)	훈련셋으로 모델을 학습합니다. 에포크는 1000번으로 배치사이즈는 32로 설정합니다.
+model.fit(x_train, y_train, epochs=500, batch_size=32)	훈련셋으로 모델을 학습합니다. 에포크는 500번으로 배치사이즈는 32로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=64)	모델을 시험셋으로 평가합니다. 배치사이즈는 64로 설정합니다.
+model.evaluate(x_test, y_test, batch_size=64)	모델을 x_test와 y_test로 평가합니다. 배치사이즈는 64로 설정합니다.
+model.add(Dense(10, input_dim=32, activation='softmax'))	모델에 입력 벡터가 32개이고 출력 벡터가 10개인 전결합층을 추가합니다. 활성화 함수를 소프트맥스로 설정합니다.
+model.add(Dense(3, input_dim=32, activation='softmax'))	모델에 입력 벡터가 32개이고 출력 벡터가 3개인 전결합층을 추가합니다. 활성화 함수를 소프트맥스로 설정합니다.
+model.add(Dense(1, input_dim=32, activation='sigmoid'))	모델에 입력 벡터가 32개이고 출력 벡터가 1개인 전결합층을 추가합니다. 활성화 함수를 시그모이드로 설정합니다.
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])	아담 최적화기와 카테고리컬 크로스엔트로피 손실함수를 사용하여 모델을 컴파일합니다. 메트릭은 정확도로 설정합니다.
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])	아담 최적화기와 categorical crossentropy 손실함수를 사용하여 모델을 컴파일합니다. 메트릭은 정확도로 설정합니다.
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])	아담 최적화기와 categorical crossentropy 로스를 사용하여 모델을 컴파일합니다. 메트릭은 정확도로 설정합니다.
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])	아담 최적화기와 categorical crossentropy 목표함수를 사용하여 모델을 컴파일합니다. 메트릭은 정확도로 설정합니다.
+model.compile(loss='mse', optimizer='adam')	목표함수를 mse로 옵터마이져를 adam으로 설정한 후 모델을 컴파일합니다.
+model.compile(loss='mse', optimizer='adam')	목표함수를 mse로 옵터마이져를 아담으로 설정한 후 모델을 컴파일합니다.
+model.compile(loss='mse', optimizer='adam')	목표함수를 mse로 최적화기를 아담으로 설정한 후 모델을 컴파일합니다.
